@@ -1,0 +1,1 @@
+Building my own custom progress bar using javascript and css

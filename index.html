@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress bar</title>
+    <style>
+      body{
+          background: whitesmoke;
+          position: relative;
+      }
+
+      .bar-container{
+        width: 300px;
+        height: 30px;
+        margin: 5rem;
+        border-radius: 25px;
+        background: grey;
+      }
+      
+      .bar{
+        background: #00b300;
+        height: 100%;
+        border-radius: 25px;
+        width: 0;
+      }
+
+      button{
+          position: absolute;
+          background: #00b300;
+          color: #fff;
+          width: 8em;
+          font-size: 1em;
+          margin: 2rem;
+          padding: .5rem;
+          cursor: pointer;
+          left: 10%;
+          top: 100%;
+          font-family: 'Consolas';
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          border-radius: 5px;
+          border: 1px solid grey;
+
+      }
+    </style>
+</head>
+<body>
+
+    <div class="bar-container">
+        <div class="bar"></div>
+    </div>
+
+    <button onclick="fillbar(5)">Start</button>
+
+    <script>
+        function fillbar(seconds){
+           const bar = document.querySelector('.bar');
+           bar.style.transition = `${seconds}s linear width`
+           bar.style.width = '100%'
+           //let percent = 0;
+           
+            // const interval = setInterval(() => {
+            //    bar.style.width = percent + '%';
+            //    percent++;
+            //    //console.log('PERCENT', percent);
+            //    percent >= 100 ? clearInterval(interval) : null; 
+            // }, (seconds * 1000) / 100)
+        }
+    </script>
+    
+</body>
+</html>
